@@ -1,0 +1,5 @@
+.idea
+.svn
+config.yaml
+.DS_Store
+core/.DS_Store
