@@ -1,0 +1,28 @@
+{
+  "name": "WeCMS",
+  "homepage": "https://github.com/weilaihui/WeCMS",
+  "authors": [
+    "xiaolinzi <weilaihui@126.com>"
+  ],
+  "description": "weixin cms",
+  "main": "",
+  "moduleType": [],
+  "keywords": [
+    "weixin",
+    "cms"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "weui": "^0.4.2",
+    "jquery-weui": "^0.7.0",
+    "zepto": "^1.1.6",
+    "artTemplate": "^3.0.1"
+  }
+}
