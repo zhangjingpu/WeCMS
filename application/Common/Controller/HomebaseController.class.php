@@ -1,6 +1,7 @@
 <?php
 namespace Common\Controller;
 use Common\Controller\AppframeController;
+use LaneWeChat\Core\WeChatOAuth;
 class HomebaseController extends AppframeController {
 	
 	public function __construct() {
@@ -249,6 +250,71 @@ class HomebaseController extends AppframeController {
 		}else{
 			C("TMPL_ACTION_ERROR",$defaultjump);
 		}
+	}
+
+	/**
+	 * 判断是否在微信浏览器
+	 * @return type
+	 */
+	final public static function inWechat() {
+		return strpos($_SERVER['HTTP_USER_AGENT'], 'MicroMessenger') !== false;
+	}
+
+	/**
+	 * 获取用户openid
+	 * @param type $both 是否同时获取accesstoken
+	 * @return boolean | object
+	 */
+	final public function getOpenId($redirect_uri = false, $both = false){
+		if (isset($_COOKIE['uopenid']) || isset($_COOKIE['uaccesstoken'])) {
+			$Openid = $_COOKIE['uopenid'];
+			$AccessToken = $_COOKIE['uaccesstoken'];
+			$this->refreshOpenId($Openid, $AccessToken);
+		} else {
+			if ($this->inWechat()) {
+				$redirect_uri = !$redirect_uri ? $this->uri : $redirect_uri;
+				$AccessCode = WeChatOAuth::getCode($redirect_uri, $state=1, $scope='snsapi_base');
+				if ($AccessCode !== FALSE) {
+					// 获取到accesstoken和openid
+					$Result = WeChatOAuth::getAccessTokenAndOpenId($AccessCode);
+					$Openid = $Result["openid"];
+					$AccessToken = $Result["access_token"];
+					// cookie持久1小时
+					$this->refreshOpenId($Openid, $AccessToken);
+					unset($Result);
+				}
+				unset($AccessCode);
+			} else {
+				return false;
+			}
+		}
+		if ($both) {
+			$ret = new stdClass();
+			$ret->openid = $Openid;
+			$ret->accesstoken = $AccessToken;
+			return $ret;
+		}
+		return $Openid;
+	}
+
+	/**
+	 *
+	 * @param string $key
+	 * @param mixed $value
+	 * @param int $exp
+	 * @return bool <b>TRUE</b> on success or <b>FALSE</b> on failure.
+	 */
+	public function sCookie($key, $value, $exp = 36000, $path = NULL, $domain = NULL) {
+		return setcookie($key, $value, $this->now + $exp, $path, $domain);
+	}
+
+	/**
+	 * 持久cookie
+	 * @param type $Openid
+	 * @param type $AccessToken
+	 */
+	private function refreshOpenId($Openid, $AccessToken) {
+		return $this->sCookie("uopenid", $Openid) && $this->sCookie("uaccesstoken", $AccessToken);
 	}
 	
 	
