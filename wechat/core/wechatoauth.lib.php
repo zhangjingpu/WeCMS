@@ -22,7 +22,7 @@ class WeChatOAuth{
         //公众号的唯一标识
         $appid = WECHAT_APPID;
         //授权后重定向的回调链接地址，请使用urlencode对链接进行处理
-        $redirect_uri = WECHAT_URL . $redirect_uri;
+//        $redirect_uri = WECHAT_URL . $redirect_uri;
         $redirect_uri = urlencode($redirect_uri);
         //返回类型，请填写code
         $response_type = 'code';

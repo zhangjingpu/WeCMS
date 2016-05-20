@@ -16,7 +16,7 @@ define('LANEWECHAT_VERSION_DATE', '2014-11-05');
 /*
  * 服务器配置，详情请参考@link http://mp.weixin.qq.com/wiki/index.php?title=接入指南
  */
-define("WECHAT_URL", 'http://race.data-xing.com');
+define("WECHAT_URL", 'http://zrace.zan-xing.com');
 define('WECHAT_TOKEN', 'q5ioJM15z5JL3IQgIlQ55iMLlcI511d5');
 define('ENCODING_AES_KEY', "DNJSq2Tu9NRkuRoDtWTWXdzL2ewtWWrpTZ2VQliPl1L");
 
