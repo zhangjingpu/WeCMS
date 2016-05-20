@@ -55,9 +55,7 @@ if(file_exists(UC_CLIENT_ROOT."config.inc.php")){
 	include UC_CLIENT_ROOT."config.inc.php";
 }
 
-//载入框架核心文件
-require SPAPP_PATH.'Core/ThinkPHP.php';
-
 // 载入wechat
 require 'wechat/lanewechat.php';
-
+//载入框架核心文件
+require SPAPP_PATH.'Core/ThinkPHP.php';
