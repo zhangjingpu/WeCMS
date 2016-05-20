@@ -270,10 +270,10 @@ class HomebaseController extends AppframeController {
 	 * @param type $both 是否同时获取accesstoken
 	 * @return boolean | object
 	 */
-	final public function getOpenId($redirect_uri = false, $both = false){
-		if (isset($_COOKIE['uopenid']) || isset($_COOKIE['uaccesstoken'])) {
-			$Openid = $_COOKIE['uopenid'];
-			$AccessToken = $_COOKIE['uaccesstoken'];
+	final public function getOpenId($redirect_uri = false){
+		if (isset($_SESSION['uopenid']) || isset($_SESSION['uaccesstoken'])) {
+			$Openid = $_SESSION['uopenid'];
+			$AccessToken = $_SESSION['uaccesstoken'];
 			$this->refreshOpenId($Openid, $AccessToken);
 		} else {
 			if ($this->inWechat()) {
@@ -292,12 +292,6 @@ class HomebaseController extends AppframeController {
 			} else {
 				return false;
 			}
-		}
-		if ($both) {
-			$ret = new stdClass();
-			$ret->openid = $Openid;
-			$ret->accesstoken = $AccessToken;
-			return $ret;
 		}
 		return $Openid;
 	}
@@ -329,7 +323,8 @@ class HomebaseController extends AppframeController {
 	 * @param type $AccessToken
 	 */
 	private function refreshOpenId($Openid, $AccessToken) {
-		return $this->sCookie("uopenid", $Openid) && $this->sCookie("uaccesstoken", $AccessToken);
+		$_SESSION["uopenid"] = $Openid;
+		$_SESSION['uaccesstoken'] = $AccessToken;
 	}
 	
 	
