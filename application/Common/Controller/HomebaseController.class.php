@@ -3,7 +3,8 @@ namespace Common\Controller;
 use Common\Controller\AppframeController;
 use LaneWeChat\Core\WeChatOAuth;
 class HomebaseController extends AppframeController {
-	
+
+	private $uri;
 	public function __construct() {
 		$this->set_action_success_error_tpl();
 		parent::__construct();
@@ -11,6 +12,7 @@ class HomebaseController extends AppframeController {
 	
 	function _initialize() {
 		parent::_initialize();
+		$this->uri = preg_replace('/\/\?\/$/', '', "http://" . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']);
 		$site_options=get_site_options();
 		$this->assign($site_options);
 //		$ucenter_syn=C("UCENTER_ENABLED");
