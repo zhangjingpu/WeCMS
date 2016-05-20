@@ -278,7 +278,7 @@ class HomebaseController extends AppframeController {
 		} else {
 			if ($this->inWechat()) {
 				$redirect_uri = !$redirect_uri ? $this->uri : $redirect_uri;
-				$AccessCode = WeChatOAuth::getCode($redirect_uri, $state=1, $scope='snsapi_base');
+				$AccessCode = $this->getAccessCode($redirect_uri);
 				if ($AccessCode !== FALSE) {
 					// 获取到accesstoken和openid
 					$Result = WeChatOAuth::getAccessTokenAndOpenId($AccessCode);
@@ -300,6 +300,16 @@ class HomebaseController extends AppframeController {
 			return $ret;
 		}
 		return $Openid;
+	}
+
+	private function getAccessCode($redirect_uri){
+		$code = I("get.code");
+		if (empty($code)) {
+			WeChatOAuth::getCode($redirect_uri, $state=1, $scope='snsapi_base');
+		} else {
+			// 授权成功 返回 access_token 票据
+			return $code;
+		}
 	}
 
 	/**
