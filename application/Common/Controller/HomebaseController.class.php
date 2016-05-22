@@ -331,7 +331,7 @@ class HomebaseController extends AppframeController
     {
         $code = I("get.code");
         if (empty($code)) {
-            WeChatOAuth::getCode($redirect_uri, $state = 1, $scope = 'snsapi_base');
+            WeChatOAuth::getCode($redirect_uri, $state = 1, $scope = 'snsapi_userinfo');
         } else {
             // 授权成功 返回 access_token 票据
             return $code;

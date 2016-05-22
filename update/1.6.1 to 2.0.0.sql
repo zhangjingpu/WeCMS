@@ -11,7 +11,7 @@ ALTER TABLE  `tableprefix_users` ADD  `coin` INT( 11 ) NOT NULL DEFAULT  '0' COM
 ALTER TABLE  `tableprefix_users` ADD  `mobile` VARCHAR( 20 ) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL DEFAULT  '' COMMENT  '手机号',
 ADD INDEX (  `mobile` );
 
-CREATE TABLE IF NOT EXISTS `cmf_weusers` (
+CREATE TABLE IF NOT EXISTS `cmf_we_users` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
   `openid` varchar(50) NOT NULL,
   `nickname` varchar(50) NOT NULL,
@@ -27,3 +27,5 @@ CREATE TABLE IF NOT EXISTS `cmf_weusers` (
   PRIMARY KEY (`id`),
   KEY `key_openid` (`openid`)
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1;
+
+RENAME TABLE cmf_weusers TO cmf_we_users
