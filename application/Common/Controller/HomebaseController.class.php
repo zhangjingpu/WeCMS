@@ -302,7 +302,7 @@ class HomebaseController extends AppframeController
     {
         $we_users_model = D("Common/WeUsers");
 
-        if ($_SESSION["user"]) {
+        if (isset($_SESSION["user"])) {
             return $_SESSION["user"];
         } else {
 
