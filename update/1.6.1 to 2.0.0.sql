@@ -22,7 +22,7 @@ CREATE TABLE IF NOT EXISTS `cmf_we_users` (
   `headimgurl` varchar(255) NOT NULL,
   `privilege` text NOT NULL,
   `create_time` datetime NOT NULL,
-  `last_login_time` date NOT NULL COMMENT '最后登陆时间',
+  `last_login_time` datetime NOT NULL COMMENT '最后登陆时间',
   `last_login_ip` varchar(20) NOT NULL COMMENT '最后登陆ip',
   PRIMARY KEY (`id`),
   KEY `key_openid` (`openid`)
