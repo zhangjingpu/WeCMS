@@ -30,7 +30,7 @@ class WeuseradminController extends AdminbaseController {
 		if(empty($id)){
 			$this->error('非法数据！');
 		}
-		$rst = M("Common/WeUsers")->where(array("id"=>$id))->delete();
+		$rst = D("Common/WeUsers")->where(array("id"=>$id))->delete();
 		if ($rst!==false) {
 			$this->success("删除成功！", U("weuseradmin/index"));
 		} else {
