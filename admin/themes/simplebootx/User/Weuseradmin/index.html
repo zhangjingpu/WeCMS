@@ -12,6 +12,7 @@
 						<th align="center">ID</th>
 						<th>OPENID</th>
 						<th>{:L('USERNAME')}</th>
+						<th>{:L('SEX')}</th>
 						<th>{:L('AVATAR')}</th>
 						<th>{:L('PROVINCE')}</th>
 						<th>{:L('CITY')}</th>
@@ -19,7 +20,6 @@
 						<th>{:L('FIRST_LOGIN_TIME')}</th>
 						<th>{:L('LAST_LOGIN_TIME')}</th>
 						<th>{:L('LAST_LOGIN_IP')}</th>
-						<th>{:L('LOGIN_TIMES')}</th>
 						<th align="center">{:L('ACTIONS')}</th>
 					</tr>
 				</thead>
@@ -29,6 +29,11 @@
 						<td align="center">{$vo.id}</td>
 						<td>{$vo.openid}</td>
 						<td>{$vo.nickname}</td>
+						<if condition="$vo['user_status'] eq 1">
+							<td>{:L('BOY')}</td>
+						<else />
+							<td>{:L('GRIL')}</td>
+						</if>
 						<td><img width="25" height="25" src="{$vo.headimgurl}" /></td>
 						<td>{$vo.province}</td>
 						<td>{$vo.city}</td>

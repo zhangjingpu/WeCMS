@@ -1,6 +1,9 @@
 <?php
 return array(
 		"USERNAME" => '用户名',
+		"SEX" => '性别',
+		"BOY" => '男',
+		"GRIL" => '女',
 		"AVATAR" => '头像',
 		"PROVINCE" => '省份',
 		"CITY" => '城市',
