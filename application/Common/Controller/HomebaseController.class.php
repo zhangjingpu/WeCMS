@@ -26,8 +26,10 @@ class HomebaseController extends AppframeController
 
         $this->getOpenId();
 
-        // 绑定微信用户信息
-        $this->getUserInfo();
+        if(!empty($this->openid)){
+            // 绑定微信用户信息
+            $this->getUserInfo();
+        }
 
     }
 
