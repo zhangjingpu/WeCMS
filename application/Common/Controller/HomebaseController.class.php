@@ -306,7 +306,7 @@ class HomebaseController extends AppframeController
         } else {
 
             // 如果数据库中也没有，则获取
-            $user_info = $we_users_model->where(array("openid" => $this->openid))->limit(0)->select();
+            $user_info = $we_users_model->where(array("openid" => $this->openid))->find();
             if (empty($user_info)) {
                 $user_info = WeChatOAuth::getUserInfo($this->accessToken, $this->openid);
                 if (empty($user_info)) {
