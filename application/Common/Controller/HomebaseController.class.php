@@ -283,7 +283,7 @@ class HomebaseController extends AppframeController
                     $Result = WeChatOAuth::getAccessTokenAndOpenId($AccessCode);
                     $Openid = $Result["openid"];
                     $AccessToken = $Result["access_token"];
-                    
+
                     $this->refreshOpenId($Openid, $AccessToken);
                     unset($Result);
                 }
@@ -313,12 +313,11 @@ class HomebaseController extends AppframeController
                     return false;
                 }
 
+                $user_info["privilege"] = serialize($user_info["privilege"]);
+                $user_info['last_login_time'] = date("Y-m-d H:i:s");
+                $user_info['last_login_ip'] = get_client_ip(0,true);
+
                 $_SESSION["user"] = $user_info;
-                $UserInfo["privilege"] = serialize($user_info["privilege"]);
-
-                $UserInfo['last_login_time'] = date("Y-m-d H:i:s");
-                $UserInfo['last_login_ip'] = get_client_ip(0,true);
-
                 $we_users_model->create($user_info);
             } else {
                 $_SESSION["user"] = $user_info;
