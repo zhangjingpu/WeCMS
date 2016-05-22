@@ -315,8 +315,7 @@ class HomebaseController extends AppframeController
                 $user_info['last_login_time'] = date("Y-m-d H:i:s");
                 $user_info['last_login_ip'] = get_client_ip(0,true);
 
-                $we_users_model->create($user_info);
-                $we_users_model->save();
+                $we_users_model->data($user_info)->add();
                 $_SESSION["user"] = $user_info;
             } else {
                 $_SESSION["user"] = $user_info;
