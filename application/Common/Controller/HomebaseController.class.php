@@ -273,9 +273,6 @@ class HomebaseController extends AppframeController
             $Openid = $_SESSION['uopenid'];
             $AccessToken = $_SESSION['uaccesstoken'];
 
-            $this->openid = $Openid;
-            $this->accessToken = $AccessToken;
-
             $this->refreshOpenId($Openid, $AccessToken);
         } else {
             if ($this->inWechat()) {
@@ -286,7 +283,7 @@ class HomebaseController extends AppframeController
                     $Result = WeChatOAuth::getAccessTokenAndOpenId($AccessCode);
                     $Openid = $Result["openid"];
                     $AccessToken = $Result["access_token"];
-                    // cookie持久1小时
+                    
                     $this->refreshOpenId($Openid, $AccessToken);
                     unset($Result);
                 }
@@ -306,6 +303,8 @@ class HomebaseController extends AppframeController
             return $_SESSION["user"];
         } else {
 
+            print $this->openid;
+            exit();
             // 如果数据库中也没有，则获取
             $user_info = $we_users_model->where(array("openid" => $this->openid))->limit(0)->select();
             if (empty($user_info)) {
@@ -359,6 +358,9 @@ class HomebaseController extends AppframeController
     {
         $_SESSION["uopenid"] = $Openid;
         $_SESSION['uaccesstoken'] = $AccessToken;
+
+        $this->openid = $Openid;
+        $this->accessToken = $AccessToken;
     }
 
 
