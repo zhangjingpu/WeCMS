@@ -14,7 +14,7 @@ class UsersModel extends CommonModel
 		array('user_email','','邮箱帐号已经存在！',0,'unique',CommonModel:: MODEL_BOTH ), // 验证user_email字段是否唯一
 		array('user_email','email','邮箱格式不正确！',0,'',CommonModel:: MODEL_BOTH ), // 验证user_email字段格式是否正确
 	);
-	
+
 	protected $_auto = array(
 	    array('create_time','mGetDate',CommonModel:: MODEL_INSERT,'callback'),
 	    array('birthday','',CommonModel::MODEL_UPDATE,'ignore')

@@ -7,11 +7,11 @@
  */
 namespace User\Controller;
 use Common\Controller\AdminbaseController;
-class OauthadminController extends AdminbaseController {
+class WeuseradminController extends AdminbaseController {
 	
 	//用户列表
 	function index(){
-		$oauth_user_model=M('OauthUser');
+		$oauth_user_model = D("Common/WeUsers");
 		$count=$oauth_user_model->where(array("status"=>1))->count();
 		$page = $this->page($count, 20);
 		$lists = $oauth_user_model
@@ -30,9 +30,9 @@ class OauthadminController extends AdminbaseController {
 		if(empty($id)){
 			$this->error('非法数据！');
 		}
-		$rst = M("OauthUser")->where(array("id"=>$id))->delete();
+		$rst = M("Common/WeUsers")->where(array("id"=>$id))->delete();
 		if ($rst!==false) {
-			$this->success("删除成功！", U("oauthadmin/index"));
+			$this->success("删除成功！", U("weuseradmin/index"));
 		} else {
 			$this->error('删除失败！');
 		}
