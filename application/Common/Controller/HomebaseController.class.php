@@ -311,6 +311,7 @@ class HomebaseController extends AppframeController
                     return false;
                 }
 
+                $user_info["openid"] = $this->openid;
                 $user_info["privilege"] = serialize($user_info["privilege"]);
                 $user_info['last_login_time'] = date("Y-m-d H:i:s");
                 $user_info['last_login_ip'] = get_client_ip(0,true);
