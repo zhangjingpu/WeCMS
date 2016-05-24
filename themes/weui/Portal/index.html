@@ -1,143 +1,233 @@
 <!DOCTYPE html>
-	<html>
-	<head>
-		<title>{$site_seo_title} {$site_name}</title>
-		<meta name="keywords" content="{$site_seo_keywords}" />
-		<meta name="description" content="{$site_seo_description}">
-		<tc_include file="Public:head" />
-		<link href="__TMPL__Public/css/slippry/slippry.css" rel="stylesheet">
-		<style>
-			.caption-wraper{position: absolute;left:50%;bottom:2em;}
-			.caption-wraper .caption{
-			position: relative;left:-50%;
-			background-color: rgba(0, 0, 0, 0.54);
-			padding: 0.4em 1em;
-			color:#fff;
-			-webkit-border-radius: 1.2em;
-			-moz-border-radius: 1.2em;
-			-ms-border-radius: 1.2em;
-			-o-border-radius: 1.2em;
-			border-radius: 1.2em;
-			}
-			@media (max-width: 767px){
-				.sy-box{margin: 12px -20px 0 -20px;}
-				.caption-wraper{left:0;bottom: 0.4em;}
-				.caption-wraper .caption{
-				left: 0;
-				padding: 0.2em 0.4em;
-				font-size: 0.92em;
-				-webkit-border-radius: 0;
-				-moz-border-radius: 0;
-				-ms-border-radius: 0;
-				-o-border-radius: 0;
-				border-radius: 0;}
-			}
-		</style>
-	</head>
-<body class="body-white">
-<tc_include file="Public:nav" />
-
-<php>
-$home_slides=sp_getslide("portal_index");
-
-$home_slides=empty($home_slides)?$default_home_slides:$home_slides;
-</php>
-<ul id="homeslider" class="unstyled">
-	<foreach name="home_slides" item="vo">
-	<li>
-		<div class="caption-wraper">
-			<div class="caption">{$vo.slide_name}</div>
-		</div>
-		<a href="{$vo.slide_url}"><img src="{:sp_get_asset_upload_path($vo['slide_pic'])}" alt=""></a>
-	</li>
-	</foreach>
-</ul>
-<div class="container">
-	
-	<div>
-		<h1 class="text-center">快速了解ThinkCMF</h1>
-		<h3 class="text-center">Quickly understand the ThinkCMF</h3>
-	</div>
-	<div class="row">
-		<div class="span4">
-			 <h2 class="font-large nospace"><i class="fa fa-bars"></i> MVC分层模式</h2>
-             <p>使用MVC应用程序被分成三个核心部件：模型（M）、视图（V）、控制器（C），他不是一个新的概念，只是ThinkCMF将其发挥到了极致。</p>
-		</div>
-		<div class="span4">
-			 <h2 class="font-large nospace"><i class="fa fa-group"></i> 用户管理</h2>
-             <p>ThinkCMF内置了灵活的用户管理方式，并可直接与第三方站点进行互联互通，如果你愿意甚至可以对单个用户或群体用户的行为进行记录及分享，为您的运营决策提供有效参考数据。</p>
-		</div>
-		<div class="span4">
-			  <h2 class="font-large nospace"><i class="fa fa-cloud"></i> 云端部署</h2>
-              <p>通过驱动的方式可以轻松支持云平台的部署，让你的网站无缝迁移，内置已经支持SAE、BAE，正式版将对云端部署进行进一步优化。</p>
-		</div>
-	</div>
-	
-	<div class="row">
-		<div class="span4">
-			 <h2 class="font-large nospace"><i class="fa fa-heart"></i> 安全策略</h2>
-             <p>提供的稳健的安全策略，包括备份恢复，容错，防治恶意攻击登陆，网页防篡改等多项安全管理功能，保证系统安全，可靠，稳定的运行。</p>
-		</div>
-		<div class="span4">
-			 <h2 class="font-large nospace"><i class="fa fa-cubes"></i> 应用模块化</h2>
-             <p>提出全新的应用模式进行扩展，不管是你开发一个小功能还是一个全新的站点，在ThinkCMF中你只是增加了一个APP，每个独立运行互不影响，便于灵活扩展和二次开发。</p>
-		</div>
-		<div class="span4">
-			  <h2 class="font-large nospace"><i class="fa fa-certificate"></i> 免费开源</h2>
-              <p>代码遵循Apache2开源协议，免费使用，对商业用户也无任何限制。</p>
-		</div>
-	</div>
-	
-	<div>
-		<h1 class="text-center">最新资讯</h1>
-		<h3 class="text-center">Last News</h3>
-	</div>
-	<php>
-		$lastnews=sp_sql_posts("cid:$portal_index_lastnews;field:post_title,post_excerpt,tid,smeta;order:listorder asc;limit:4;"); 
-	</php>
-	<div class="row">
-		<foreach name="lastnews" item="vo">
-		<php>$smeta=json_decode($vo['smeta'],true);</php>
-		<div class="span3">
-			<div class="tc-gridbox">
-				<div class="header">
-					<div class="item-image">
-						<a href="{:leuu('article/index',array('id'=>$vo['tid'],'cid'=>$vo['term_id']))}">
-							<if condition="empty($smeta['thumb'])"> 
-								<img src="__TMPL__Public/images/default_tupian1.png" class="img-responsive" alt="{$vo.post_title}"/>
-							<else /> 
-								<img src="{:sp_get_asset_upload_path($smeta['thumb'])}" class="img-responsive img-thumbnail" alt="{$vo.post_title}" />
-							</if>
-						</a>
-					</div>
-					<h3><a href="{:leuu('article/index',array('id'=>$vo['tid'],'cid'=>$vo['term_id']))}">{$vo.post_title}</a></h3>
-					<hr>
+<html>
+<head>
+	<title>天天爱竞走</title>
+	<style type="text/css">
+		.c{display:none;}
+	</style>
+	<meta http-equiv="content-type" content="text/html;charset=utf-8"/>
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no,target-densitydpi=device-dpi" />
+	<link rel="stylesheet" href="__PUBLIC__/css/main.css" type="text/css" />
+	<script type="application/javascript" src="__PUBLIC__/js/jquery-1.11.3.min.js"></script>
+	<script type="application/javascript" src="__PUBLIC__/js/jquery-ui.js"></script>
+</head>
+<body>
+<div class="main">
+	<div class="body">
+		<div class="box">
+			<div class="fans">
+				<img src="__PUBLIC__/img/助力粉丝框@2x.png" width="176px" height="26px"/>
+			</div>
+			<div class="fans_num">
+				助力粉丝:1500人
+			</div>
+			<div class="sign">
+				<img src="__PUBLIC__/img/每日签到-&-金币@2x.png" width="172px" height="128px" onclick="getCoin()"/>
+			</div>
+			<div class="extra">
+				+1000
+			</div>
+			<div class="coin" id="money">
+				<img src="__PUBLIC__/img/+$10金币@2x.png" width="80px" height="29px" />
+			</div>
+			<div class="win">
+				<img src="__PUBLIC__/img/R6@2x.png" width="164px" height="155px"/>
+			</div>
+			<div class="head">
+				<img src="__PUBLIC__/img/小头像@2x.png" width="45px" height="45px"/>
+			</div>
+			<div class="num5">
+				<img src="__PUBLIC__/img/R5@2x.png" width="168px" height="168px"/>
+			</div>
+			<div class="num4">
+				<img src="__PUBLIC__/img/R4@2x.png" width="159px" height="152px"/>
+			</div>
+			<div class="num3">
+				<img src="__PUBLIC__/img/R3@2x.png" width="155px" height="150px"/>
+			</div>
+			<div class="num2">
+				<img src="__PUBLIC__/img/R2@2x.png" width="145px" height="143px"/>
+			</div>
+			<div class="num1">
+				<img src="__PUBLIC__/img/R1@2x.png" width="146px" height="143px"/>
+			</div>
+			<div class="head1" >
+				<img src="__PUBLIC__/img/大头@2x.png" width="77px" height="77px" id="m" onclick="move()"/>
+			</div>
+			<div class="head2">
+				<img src="__PUBLIC__/img/小头像@2x.png" width="45px" height="45px"/>
+			</div>
+			<div class="head3">
+				<img src="__PUBLIC__/img/小头像@2x.png" width="45px" height="45px"/>
+			</div>
+			<div  onclick="show()" id="pp">
+				<img src="__PUBLIC__/img/小头像@2x.png" width="45px" height="45px"/>
+			</div>
+			<div class="square" id="kk">
+				<div class="more">
+					<a href="#"><img src="__PUBLIC__/img/更多@2x.png" width="43px" height="43px"/></a>
 				</div>
-				<div class="body">
-					<p><a href="{:leuu('article/index',array('id'=>$vo['tid'],'cid'=>$vo['term_id']))}">{:msubstr($vo['post_excerpt'],0,32)}</a></p>
+				<div class="close" onclick="close1()">
+					<img src="__PUBLIC__/img/关闭@2x.png" width="43px" height="43px" />
+				</div>
+				<div class="circle">
+				</div>
+				<div class="intro">
+					<div class="left">搜索搜索</div>
+					<div class="right">搜索</div>
+					<div style="clear: both"></div>
+				</div>
+				<div class="bolumn">
+					<div class="b1">
+						<a href="#"><img src="__PUBLIC__/img/" width="120px" height="140px"/></a>
+					</div>
+					<div class="b2">
+						<a href="#"><img src="__PUBLIC__/img/" width="120px" height="140px"/></a>
+					</div>
+					<div class="b3">
+						<a href="#"><img src="__PUBLIC__/img/" width="120px" height="140px"/></a>
+					</div>
+					<div style="clear: both"></div>
+				</div>
+				<div class="bu">
+					<img src="__PUBLIC__/img/为女神助力夺冠-按钮@2x.png" width="179px" height="65px" id="qq"/>
+				</div>
+			</div>
+
+		</div>
+
+		<div class="other">
+
+
+			<div class="container">
+				<ul>
+					<li style="float: left" class="a" onclick="one()"><div class="game title" ><a href="#aa" style="outline: none"><font  id="t1">游戏说明</font></a></div></li>
+					<li style="float: left" class="b" onclick="two()"><div class="rank title" ><a href="#as" style="outline: none"><font  id="t2">粉丝排名</font></a></div></li>
+				</ul>
+				<div class="c content1" id="aa">
+					<br/>
+					·奖项说明：<br/>
+					到达<img src="__PUBLIC__/img/1@2x.png"/>   安德鲁森兑换券! 贡献榜<font color="#d72a87">TOP35</font><br/>
+					到达<img src="__PUBLIC__/img/2@2x.png"/>   免费看电影! 贡献榜<font color="#d72a87">TOP30</font><br/>
+					到达<img src="__PUBLIC__/img/3@2x.png"/>   网红带你吃火锅! 贡献榜<font color="#d72a87">TOP25</font><br/>
+					到达<img src="__PUBLIC__/img/4@2x.png"/>   网红和你KTV! 贡献榜<font color="#d72a87">TOP25</font><br/>
+					到达<img src="__PUBLIC__/img/5@2x.png"/>   网红陪你轰趴！贡献榜<font color="#d72a87">TOP20</font><br/>
+					到达<img src="__PUBLIC__/img/6@2x.png"/>	   <font color="#d72a87">神秘大礼！贡献榜TOP5</font><br/>
+					·兑奖说明：<br/>
+					奖项3-6由官方提供<font color="#d72a87">全程免费与网红零距离接触</font>的机会。得到奖项的粉丝由抽中后的1个工作日内由工作人员线下联系<br/>
+					·粉丝贡献：<br/>
+					每天签到得到的金币可贡献给自己支持的网红，为她加油！点击一次网红头像<img src="__PUBLIC__/img/为女神助力夺冠-按钮-拷贝@2x.png"/>中的      消耗10金币，为网红接力0.2公里（PS：连续签到金币更高喔！）
+
+				</div>
+				<div class="c content2" id="as">
+					<br/>
+					<table>
+						<tr style="height: 54px;"><td style="width:578px;background-color:#d2ddf1 ">TOP 1</td></tr>
+						<tr style="height: 54px;"><td style="width:578px;background-color:#e8eef9 ">TOP 2</td></tr>
+						<tr style="height: 54px;"><td style="width:578px;background-color:#d2ddf1 ">TOP 3</td></tr>
+						<tr style="height: 54px;"><td style="width:578px;background-color:#e8eef9 ">TOP 4</td></tr>
+						<tr style="height: 54px;"><td style="width:578px;background-color:#d2ddf1 ">TOP 5</td></tr>
+						<tr style="height: 54px;"><td style="width:578px;background-color:#e8eef9 ">TOP 6</td></tr>
+						<tr style="height: 54px;"><td style="width:578px;background-color:#d2ddf1 ">TOP 7</td></tr>
+						<tr style="height: 54px;"><td style="width:578px;background-color:#e8eef9 ">TOP 8</td></tr>
+						<tr style="height: 54px;"><td style="width:578px;background-color:#d2ddf1 ">TOP 9</td></tr>
+						<tr style="height: 54px;"><td style="width:578px;background-color:#e8eef9 ">TOP 10</td></tr>
+					</table>
 				</div>
 			</div>
 		</div>
-		</foreach>
 	</div>
-<tc_include file="Public:footer"/>
 </div>
-
-<tc_include file="Public:scripts"/>
-<script src="__TMPL__Public/js/slippry.min.js"></script>
-<script>
-$(function() {
-	var demo1 = $("#homeslider").slippry({
-		transition: 'fade',
-		useCSS: true,
-		captions: false,
-		speed: 1000,
-		pause: 3000,
-		auto: true,
-		preload: 'visible'
-	});
-});
-</script>
-{:hook('footer_end')}
 </body>
 </html>
+
+<script type="application/javascript">
+	/*************选项卡切换*************************/
+	$(function(){
+		$('.container').tabs();
+	})
+	/***********************************************/
+	/******************页面强制转换分辨率*************/
+	$(window).bind('resize load', function(){
+		$("body").css("zoom", $(window).width() / 720);
+		$("body").css("display" , "block");
+	});
+	/***********************************************/
+	/****************签到金币显示隐藏****************/
+	function getCoin(){
+
+		var coin=document.getElementById('money');
+		coin.style.display='block';
+		setTimeout('hidden()',1000);
+	}
+
+	function hidden(){
+		var coin=document.getElementById('money');
+		coin.style.display='none';
+	}
+	/************************************************/
+	/***************自定义动画**********************/
+	/*function move(){
+
+	 $('#m').animate({
+	 position:"absolute",
+	 marginTop:'+50px',
+	 marginLeft:'-50px',
+	 opacity: 'show'
+	 },'slow')
+	 }*/
+
+	/************************************************/
+	/***************选中背景图切换********************/
+	function one(){
+		var aa=document.getElementById('aa');
+		var as=document.getElementById('as');
+		aa.style.display='block';
+		as.style.display='none';
+	}
+
+	function two(){
+		var as=document.getElementById('as');
+		var aa=document.getElementById('aa');
+		as.style.display='block';
+		aa.style.display='none';
+	}
+	/************************************************/
+	/*****************关闭弹窗**********************/
+	function close1(){
+		var square=document.getElementById('kk');
+		square.style.display='none';
+	}
+	/************************************************/
+	/****************显示弹窗***************************/
+	function show(){
+		var square=document.getElementById('kk');
+		square.style.display='block';
+	}
+	/***************************************************/
+	/******************点击*************************/
+
+
+
+
+
+	/**********************************************/
+	$(function(){
+		$(".sign").click(function(){
+			$.ajax({
+				Type:'post',
+				url:'__APP__/home/index/index.html',
+				dataType:'json',
+				data:{
+					time:date('Y-m-d H:i:s',time()),money:10
+				},
+				success:function(data){
+					alert(data);
+				}
+
+			})
+		})
+
+	})
+</script>
+

@@ -260,8 +260,7 @@ class HomebaseController extends AppframeController
      */
     final public static function inWechat()
     {
-//		return strpos($_SERVER['HTTP_USER_AGENT'], 'MicroMessenger') !== false;
-        return true;
+		return strpos($_SERVER['HTTP_USER_AGENT'], 'MicroMessenger') !== false;
     }
 
     /**

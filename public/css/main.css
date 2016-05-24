@@ -1,0 +1,353 @@
+*{margin:0px;padding:0px;}
+ul li{list-style: none;outline:none;}
+a{text-decoration: none;color: #f477be}
+li a:hover{color: white;}
+/******************首页*********************/
+/*.main{width: 100%;height: 1700px;}*/
+.body{width: 720px;height: 1665px;margin: 0px auto; }
+.box{width: 720px;height: 764px;margin: 0px auto;background-image: url('../img/赛道@2x.png');position:relative; }
+.sign{width: 172px;height: 128px;position: absolute;top:14%;left:5%; cursor: pointer; }
+.extra{width: 60px;height: 20px;position: absolute;top:26%;left:10%; font-size: 10px;color:white }
+.fans{width:176px;height:26px;position: absolute;left: 35%;top: 5px; }
+.fans_num{width: 80px;height:20px;line-height:20px;position: absolute;left: 41%;top: 1%;font-size: 10px;color: #8a8a8a}
+.win{width:164px;height:155px;position: absolute;right:14%;top:-5%; }
+.head{width:45px;height:45px;position: absolute;right:14%;top: 2%;}
+.head1{width:77px;height:77px;position: absolute;top: 36%;right:25%;}
+/*.head1{width:77px;height:77px;position: absolute;top: 34%;right:35%}*/
+.head2{width:45px;height:45px;position: absolute;left:27%;top: 56%;}
+.head3{width:45px;height:45px;position: absolute;left:49%;top: 78%;}
+.point0{width:45px;height:45px;position: absolute;left:70%;top: 94%;}/*****起始位置*******/
+.point1{width:45px;height:45px;position: absolute;left:70%;top: 93%;}/*****1*******/
+.point2{width:45px;height:45px;position: absolute;left:70%;top: 92%;}/*****2*******/
+.point3{width:45px;height:45px;position: absolute;left:70%;top: 91%;}/*****3*******/
+.point4{width:45px;height:45px;position: absolute;left:70%;top: 90%;}/*****4*******/
+/*.head4{width:45px;height:45px;position: absolute;left:70%;top: 89%;}*//*****5*******/
+/*.head4{width:45px;height:45px;position: absolute;left:70%;top: 88%;}*//*****6*******/
+/*.head4{width:45px;height:45px;position: absolute;left:70%;top: 87%;}*//*****7*******/
+/*.head4{width:45px;height:45px;position: absolute;left:70%;top: 86%;}*//*****8*******/
+/*.head4{width:45px;height:45px;position: absolute;left:70%;top: 85%;}*//*****9*******/
+/*.head4{width:45px;height:45px;position: absolute;left:69%;top: 85%;}*//*****10*******/
+/*.head4{width:45px;height:45px;position: absolute;left:68%;top: 85%;}*//*****11*******/
+/*.head4{width:45px;height:45px;position: absolute;left:67%;top: 85%;}*//*****12*******/
+/*.head4{width:45px;height:45px;position: absolute;left:66%;top: 85%;}*//*****13*******/
+/*.head4{width:45px;height:45px;position: absolute;left:65%;top: 85%;}*//*****14*******/
+/*.head4{width:45px;height:45px;position: absolute;left:64%;top: 84%;}*//*****15*******/
+/*.head4{width:45px;height:45px;position: absolute;left:63%;top: 84%;}*//*****16*******/
+/*.head4{width:45px;height:45px;position: absolute;left:62%;top: 83%;}*//*****17*******/
+/*.head4{width:45px;height:45px;position: absolute;left:61%;top: 83%;}*//*****18*******/
+/*.head4{width:45px;height:45px;position: absolute;left:60%;top: 83%;}*//*****19*******/
+/*.head4{width:45px;height:45px;position: absolute;left:60%;top: 82.5%;}*//*****20*******/
+/*.head4{width:45px;height:45px;position: absolute;left:59%;top: 82.5%;}*//*****21*******/
+/*.head4{width:45px;height:45px;position: absolute;left:58%;top: 82.5%;}*//*****22*******/
+/*.head4{width:45px;height:45px;position: absolute;left:57%;top: 82.5%;}*//*****23*******/
+/*.head4{width:45px;height:45px;position: absolute;left:56%;top: 82.5%;}*//*****24*******/
+/*.head4{width:45px;height:45px;position: absolute;left:55%;top: 82%;}*//*****25*******/
+/*.head4{width:45px;height:45px;position: absolute;left:54%;top: 82%;}*//*****26*******/
+/*.head4{width:45px;height:45px;position: absolute;left:53%;top: 82%;}*//*****27*******/
+/*.head4{width:45px;height:45px;position: absolute;left:52%;top: 81.5%;}*//*****28*******/
+/*.head4{width:45px;height:45px;position: absolute;left:51%;top: 81.5%;}*//*****29*******/
+/*.head4{width:45px;height:45px;position: absolute;left:50%;top: 81%;}*//*****30*******/
+/*.head4{width:45px;height:45px;position: absolute;left:49%;top: 81%;}*//*****31*******/
+/*.head4{width:45px;height:45px;position: absolute;left:48%;top: 80.5%;}*//*****32*******/
+/*.head4{width:45px;height:45px;position: absolute;left:47%;top: 80%;}*//*****33*******/
+/*.head4{width:45px;height:45px;position: absolute;left:46%;top: 79.5%;}*//*****34*******/
+/*.head4{width:45px;height:45px;position: absolute;left:46%;top: 79%;}*//*****35*******/
+/*.head4{width:45px;height:45px;position: absolute;left:46%;top: 78.5%;}*//*****36*******/
+/*.head4{width:45px;height:45px;position: absolute;left:46.5%;top: 78%;}*//*****37*******/
+/*.head4{width:45px;height:45px;position: absolute;left:47%;top: 77.5%;}*//*****38*******/
+/*.head4{width:45px;height:45px;position: absolute;left:47.5%;top: 77%;}*//*****39*******/
+/*.head4{width:45px;height:45px;position: absolute;left:48%;top: 77%;}*//*****40*******/
+/*.head4{width:45px;height:45px;position: absolute;left:48.5%;top: 77%;}*//*****41*******/
+/*.head4{width:45px;height:45px;position: absolute;left:49%;top: 77%;}*//*****42*******/
+/*.head4{width:45px;height:45px;position: absolute;left:50%;top: 76.5%;}*//*****43*******/
+/*.head4{width:45px;height:45px;position: absolute;left:51%;top: 76.5%;}*//*****44*******/
+/*.head4{width:45px;height:45px;position: absolute;left:52%;top: 76%;}*//*****45*******/
+/*.head4{width:45px;height:45px;position: absolute;left:53%;top: 76%;}*//*****46*******/
+/*.head4{width:45px;height:45px;position: absolute;left:54%;top: 76%;}*//*****47*******/
+/*.head4{width:45px;height:45px;position: absolute;left:55%;top: 76%;}*//*****48*******/
+/*.head4{width:45px;height:45px;position: absolute;left:56%;top: 76%;}*//*****49*******/
+/*.head4{width:45px;height:45px;position: absolute;left:57%;top: 75.5%;}*//*****50*******/
+/*.head4{width:45px;height:45px;position: absolute;left:58%;top: 75.5%;}*//*****51*******/
+/*.head4{width:45px;height:45px;position: absolute;left:59%;top: 75.5%;}*//*****52*******/
+/*.head4{width:45px;height:45px;position: absolute;left:60%;top: 75.5%;}*//*****53*******/
+/*.head4{width:45px;height:45px;position: absolute;left:61%;top: 75.5%;}*//*****54*******/
+/*.head4{width:45px;height:45px;position: absolute;left:62%;top: 75.5%;}*//*****55*******/
+/*.head4{width:45px;height:45px;position: absolute;left:63%;top: 75%;}*//*****56*******/
+/*.head4{width:45px;height:45px;position: absolute;left:64%;top: 75%;}*//*****57*******/
+/*.head4{width:45px;height:45px;position: absolute;left:65%;top: 75%;}*//*****57*******/
+/*.head4{width:45px;height:45px;position: absolute;left:66%;top: 75%;}*//*****58*******/
+/*.head4{width:45px;height:45px;position: absolute;left:67%;top: 75%;}*//*****59*******/
+/*.head4{width:45px;height:45px;position: absolute;left:68%;top: 75%;}*//*****60*******/
+/*.head4{width:45px;height:45px;position: absolute;left:69%;top: 75%;}*//*****61*******/
+/*.head4{width:45px;height:45px;position: absolute;left:70%;top: 74.5%;}*//*****62*******/
+/*.head4{width:45px;height:45px;position: absolute;left:71%;top: 74.5%;}*//*****63*******/
+/*.head4{width:45px;height:45px;position: absolute;left:72%;top: 74.5%;}*//*****64*******/
+/*.head4{width:45px;height:45px;position: absolute;left:73%;top: 74%;}*//*****65*******/
+/*.head4{width:45px;height:45px;position: absolute;left:74%;top: 74%;}*//*****66*******/
+/*.head4{width:45px;height:45px;position: absolute;left:75%;top: 74%;}*//*****67*******/
+/*.head4{width:45px;height:45px;position: absolute;left:76%;top: 74%;}*//*****68*******/
+/*.head4{width:45px;height:45px;position: absolute;left:77%;top: 74%;}*//*****69*******/
+/*.head4{width:45px;height:45px;position: absolute;left:78%;top: 74%;}*//*****70*******/
+/*.head4{width:45px;height:45px;position: absolute;left:78%;top: 73%;}*//*****71*******/
+/*.head4{width:45px;height:45px;position: absolute;left:79%;top: 72%;}*//*****72*******/
+/*.head4{width:45px;height:45px;position: absolute;left:80%;top: 71%;}*//*****73*******/
+/*.head4{width:45px;height:45px;position: absolute;left:81%;top: 70%;}*//*****74*******/
+/*.head4{width:45px;height:45px;position: absolute;left:82%;top: 69%;}*//*****75*******/
+/*.head4{width:45px;height:45px;position: absolute;left:82%;top: 68%;}*//*****76*******/
+/*.head4{width:45px;height:45px;position: absolute;left:83%;top: 67%;}*//*****77*******/
+/*.head4{width:45px;height:45px;position: absolute;left:83%;top: 66%;}*//*****78*******/
+/*.head4{width:45px;height:45px;position: absolute;left:83%;top: 65%;}*//*****79*******/
+/*.head4{width:45px;height:45px;position: absolute;left:83%;top: 64%;}*//*****80*******/
+/*.head4{width:45px;height:45px;position: absolute;left:83%;top: 63%;}*//*****81*******/
+/*.head4{width:45px;height:45px;position: absolute;left:82%;top: 62%;}*//*****82*******/
+/*.head4{width:45px;height:45px;position: absolute;left:81%;top: 62%;}*//*****83*******/
+/*.head4{width:45px;height:45px;position: absolute;left:80%;top: 61%;}*//*****84*******/
+/*.head4{width:45px;height:45px;position: absolute;left:79%;top: 61%;}*//*****85*******/
+/*.head4{width:45px;height:45px;position: absolute;left:78%;top: 61%;}*//*****86*******/
+/*.head4{width:45px;height:45px;position: absolute;left:77%;top: 60%;}*//*****87*******/
+/*.head4{width:45px;height:45px;position: absolute;left:76%;top: 60%;}*//*****88*******/
+/*.head4{width:45px;height:45px;position: absolute;left:75%;top: 59%;}*//*****89*******/
+/*.head4{width:45px;height:45px;position: absolute;left:74%;top: 59%;}*//*****90*******/
+/*.head4{width:45px;height:45px;position: absolute;left:73%;top: 59%;}*//*****91*******/
+/*.head4{width:45px;height:45px;position: absolute;left:72%;top: 59%;}*//*****92*******/
+/*.head4{width:45px;height:45px;position: absolute;left:71%;top: 59%;}*//*****93*******/
+/*.head4{width:45px;height:45px;position: absolute;left:70%;top: 59%;}*//*****94*******/
+/*.head4{width:45px;height:45px;position: absolute;left:69%;top: 59%;}*//*****95*******/
+/*.head4{width:45px;height:45px;position: absolute;left:68%;top: 58%;}*//*****96*******/
+/*.head4{width:45px;height:45px;position: absolute;left:67%;top: 58%;}*//*****97*******/
+/*.head4{width:45px;height:45px;position: absolute;left:66%;top: 58%;}*//*****98*******/
+/*.head4{width:45px;height:45px;position: absolute;left:65%;top: 58%;}*//*****99*******/
+/*.head4{width:45px;height:45px;position: absolute;left:64%;top: 58%;}*//*****100*******/
+/*.head4{width:45px;height:45px;position: absolute;left:63%;top: 58%;}*//*****101*******/
+/*.head4{width:45px;height:45px;position: absolute;left:62%;top: 58%;}*//*****102*******/
+/*.head4{width:45px;height:45px;position: absolute;left:61%;top: 58%;}*//*****103*******/
+/*.head4{width:45px;height:45px;position: absolute;left:60%;top: 58%;}*//*****104*******/
+/*.head4{width:45px;height:45px;position: absolute;left:59%;top: 58%;}*//*****105*******/
+/*.head4{width:45px;height:45px;position: absolute;left:58%;top: 58%;}*//*****106*******/
+/*.head4{width:45px;height:45px;position: absolute;left:57%;top: 58%;}*//*****107*******/
+/*.head4{width:45px;height:45px;position: absolute;left:56%;top: 57.5%;}*//*****108*******/
+/*.head4{width:45px;height:45px;position: absolute;left:55%;top: 57.5%;}*//*****109*******/
+/*.head4{width:45px;height:45px;position: absolute;left:54%;top: 57.5%;}*//*****110*******/
+/*.head4{width:45px;height:45px;position: absolute;left:53%;top: 57.5%;}*//*****111*******/
+/*.head4{width:45px;height:45px;position: absolute;left:52%;top: 57.5%;}*//*****112*******/
+/*.head4{width:45px;height:45px;position: absolute;left:51%;top: 57.5%;}*//*****113*******/
+/*.head4{width:45px;height:45px;position: absolute;left:50%;top: 57.5%;}*//*****114*******/
+/*.head4{width:45px;height:45px;position: absolute;left:49%;top: 57.5%;}*//*****115*******/
+/*.head4{width:45px;height:45px;position: absolute;left:48%;top: 57.5%;}*//*****116*******/
+/*.head4{width:45px;height:45px;position: absolute;left:47%;top: 57.5%;}*//*****117*******/
+/*.head4{width:45px;height:45px;position: absolute;left:46%;top: 57.5%;}*//*****118*******/
+/*.head4{width:45px;height:45px;position: absolute;left:45%;top: 57.5%;}*//*****119*******/
+/*.head4{width:45px;height:45px;position: absolute;left:44%;top: 57.5%;}*//*****120*******/
+/*.head4{width:45px;height:45px;position: absolute;left:43%;top: 57.5%;}*//*****121*******/
+/*.head4{width:45px;height:45px;position: absolute;left:42%;top: 57.5%;}*//*****122*******/
+/*.head4{width:45px;height:45px;position: absolute;left:41%;top: 57.5%;}*//*****123*******/
+/*.head4{width:45px;height:45px;position: absolute;left:40%;top: 57.5%;}*//*****124*******/
+/*.head4{width:45px;height:45px;position: absolute;left:39%;top: 57.5%;}*//*****125*******/
+/*.head4{width:45px;height:45px;position: absolute;left:38%;top: 57.5%;}*//*****126*******/
+/*.head4{width:45px;height:45px;position: absolute;left:37%;top: 57.5%;}*//*****127*******/
+/*.head4{width:45px;height:45px;position: absolute;left:36%;top: 57.5%;}*//*****128*******/
+/*.head4{width:45px;height:45px;position: absolute;left:35%;top: 57%;}*//*****129*******/
+/*.head4{width:45px;height:45px;position: absolute;left:34%;top: 57%;}*//*****130*******/
+/*.head4{width:45px;height:45px;position: absolute;left:33%;top: 57%;}*//*****131*******/
+/*.head4{width:45px;height:45px;position: absolute;left:32%;top: 57%;}*//*****132*******/
+/*.head4{width:45px;height:45px;position: absolute;left:31%;top: 57%;}*//*****133*******/
+/*.head4{width:45px;height:45px;position: absolute;left:30%;top: 56.5%;}*//*****134*******/
+/*.head4{width:45px;height:45px;position: absolute;left:29%;top: 56.5%;}*//*****135*******/
+/*.head4{width:45px;height:45px;position: absolute;left:28%;top: 56.5%;}*//*****136*******/
+/*.head4{width:45px;height:45px;position: absolute;left:27%;top: 56%;}*//*****137*******/
+/*.head4{width:45px;height:45px;position: absolute;left:26%;top: 56%;}*//*****138*******/
+/*.head4{width:45px;height:45px;position: absolute;left:25%;top: 56%;}*//*****139*******/
+/*.head4{width:45px;height:45px;position: absolute;left:24%;top: 55%;}*//*****140*******/
+/*.head4{width:45px;height:45px;position: absolute;left:23%;top: 55%;}*//*****141*******/
+/*.head4{width:45px;height:45px;position: absolute;left:22%;top: 55%;}*//*****142*******/
+/*.head4{width:45px;height:45px;position: absolute;left:21%;top: 55%;}*//*****143*******/
+/*.head4{width:45px;height:45px;position: absolute;left:20%;top: 55%;}*//*****144*******/
+/*.head4{width:45px;height:45px;position: absolute;left:19%;top: 54%;}*//*****145*******/
+/*.head4{width:45px;height:45px;position: absolute;left:18%;top: 54%;}*//*****146*******/
+/*.head4{width:45px;height:45px;position: absolute;left:17%;top: 53%;}*//*****147*******/
+/*.head4{width:45px;height:45px;position: absolute;left:16%;top: 53%;}*//*****148*******/
+/*.head4{width:45px;height:45px;position: absolute;left:15%;top: 52%;}*//*****149*******/
+/*.head4{width:45px;height:45px;position: absolute;left:14%;top: 51%;}*//*****150*******/
+/*.head4{width:45px;height:45px;position: absolute;left:13%;top: 50%;}*//*****151*******/
+/*.head4{width:45px;height:45px;position: absolute;left:12%;top: 49%;}*//*****152*******/
+/*.head4{width:45px;height:45px;position: absolute;left:11%;top: 48%;}*//*****153*******/
+/*.head4{width:45px;height:45px;position: absolute;left:10%;top: 47%;}*//*****154*******/
+/*.head4{width:45px;height:45px;position: absolute;left:9%;top: 46%;}*//*****155*******/
+/*.head4{width:45px;height:45px;position: absolute;left:9%;top: 45%;}*//*****156*******/
+/*.head4{width:45px;height:45px;position: absolute;left:8%;top: 44%;}*//*****157*******/
+/*.head4{width:45px;height:45px;position: absolute;left:8%;top: 43%;}*//*****158*******/
+/*.head4{width:45px;height:45px;position: absolute;left:8%;top: 42%;}*//*****160*******/
+/*.head4{width:45px;height:45px;position: absolute;left:8%;top: 41%;}*//*****161*******/
+/*.head4{width:45px;height:45px;position: absolute;left:8%;top: 40%;}*//*****162*******/
+/*.head4{width:45px;height:45px;position: absolute;left:8%;top: 39%;}*//*****163*******/
+/*.head4{width:45px;height:45px;position: absolute;left:8%;top: 38%;}*//*****164*******/
+/*.head4{width:45px;height:45px;position: absolute;left:8%;top: 37%;}*//*****165*******/
+/*.head4{width:45px;height:45px;position: absolute;left:8%;top: 36%;}*//*****166*******/
+/*.head4{width:45px;height:45px;position: absolute;left:9%;top: 35%;}*//*****167*******/
+/*.head4{width:45px;height:45px;position: absolute;left:9%;top: 34%;}*//*****168*******/
+/*.head4{width:45px;height:45px;position: absolute;left:10%;top: 33%;}*//*****169*******/
+/*.head4{width:45px;height:45px;position: absolute;left:11%;top: 32%;}*//*****170*******/
+/*.head4{width:45px;height:45px;position: absolute;left:12%;top: 32%;}*//*****171*******/
+/*.head4{width:45px;height:45px;position: absolute;left:13%;top: 32%;}*//*****172*******/
+/*.head4{width:45px;height:45px;position: absolute;left:14%;top: 31%;}*//*****173*******/
+/*.head4{width:45px;height:45px;position: absolute;left:15%;top: 31%;}*//*****174*******/
+/*.head4{width:45px;height:45px;position: absolute;left:16%;top: 31%;}*//*****175*******/
+/*.head4{width:45px;height:45px;position: absolute;left:17%;top: 30%;}*//*****176*******/
+/*.head4{width:45px;height:45px;position: absolute;left:18%;top: 30%;}*//*****177*******/
+/*.head4{width:45px;height:45px;position: absolute;left:19%;top: 30%;}*//*****178*******/
+/*.head4{width:45px;height:45px;position: absolute;left:20%;top: 30%;}*//*****179*******/
+/*.head4{width:45px;height:45px;position: absolute;left:21%;top: 30%;}*//*****180*******/
+/*.head4{width:45px;height:45px;position: absolute;left:22%;top: 30%;}*//*****181*******/
+/*.head4{width:45px;height:45px;position: absolute;left:23%;top: 30%;}*//*****182*******/
+/*.head4{width:45px;height:45px;position: absolute;left:24%;top: 30%;}*//*****183*******/
+/*.head4{width:45px;height:45px;position: absolute;left:25%;top: 30%;}*//*****184*******/
+/*.head4{width:45px;height:45px;position: absolute;left:26%;top: 30%;}*//*****185*******/
+/*.head4{width:45px;height:45px;position: absolute;left:27%;top: 30%;}*//*****186*******/
+/*.head4{width:45px;height:45px;position: absolute;left:28%;top: 30%;}*//*****187*******/
+/*.head4{width:45px;height:45px;position: absolute;left:29%;top: 30%;}*//*****188*******/
+/*.head4{width:45px;height:45px;position: absolute;left:30%;top: 30%;}*//*****189*******/
+/*.head4{width:45px;height:45px;position: absolute;left:31%;top: 30%;}*//*****190*******/
+/*.head4{width:45px;height:45px;position: absolute;left:32%;top: 30%;}*//*****191*******/
+/*.head4{width:45px;height:45px;position: absolute;left:33%;top: 30%;}*//*****192*******/
+/*.head4{width:45px;height:45px;position: absolute;left:34%;top: 30%;}*//*****193*******/
+/*.head4{width:45px;height:45px;position: absolute;left:35%;top: 30%;}*//*****194*******/
+/*.head4{width:45px;height:45px;position: absolute;left:36%;top: 31%;}*//*****195*******/
+/*.head4{width:45px;height:45px;position: absolute;left:37%;top: 31%;}*//*****196*******/
+/*.head4{width:45px;height:45px;position: absolute;left:38%;top: 31%;}*//*****197*******/
+/*.head4{width:45px;height:45px;position: absolute;left:39%;top: 31.5%;}*//*****198*******/
+/*.head4{width:45px;height:45px;position: absolute;left:40%;top: 32%;}*//*****199*******/
+/*.head4{width:45px;height:45px;position: absolute;left:41%;top: 32%;}*//*****200*******/
+/*.head4{width:45px;height:45px;position: absolute;left:42%;top: 32%;}*//*****201*******/
+/*.head4{width:45px;height:45px;position: absolute;left:43%;top: 32.5%;}*//*****202*******/
+/*.head4{width:45px;height:45px;position: absolute;left:44%;top: 33%;}*//*****203*******/
+/*.head4{width:45px;height:45px;position: absolute;left:45%;top: 33%;}*//*****204*******/
+/*.head4{width:45px;height:45px;position: absolute;left:46%;top: 33.5%;}*//*****205*******/
+/*.head4{width:45px;height:45px;position: absolute;left:47%;top: 33.5%;}*//*****206*******/
+/*.head4{width:45px;height:45px;position: absolute;left:48%;top: 34%;}*//*****207*******/
+/*.head4{width:45px;height:45px;position: absolute;left:49%;top: 34.5%;}*//*****208*******/
+/*.head4{width:45px;height:45px;position: absolute;left:50%;top: 34.5%;}*//*****209*******/
+/*.head4{width:45px;height:45px;position: absolute;left:51%;top: 35%;}*//*****210*******/
+/*.head4{width:45px;height:45px;position: absolute;left:52%;top: 35%;}*//*****211*******/
+/*.head4{width:45px;height:45px;position: absolute;left:53%;top: 35.5%;}*//*****212*******/
+/*.head4{width:45px;height:45px;position: absolute;left:54%;top: 35.5%;}*//*****213*******/
+/*.head4{width:45px;height:45px;position: absolute;left:55%;top: 36%;}*//*****214*******/
+/*.head4{width:45px;height:45px;position: absolute;left:56%;top: 36.5%;}*//*****215*******/
+/*.head4{width:45px;height:45px;position: absolute;left:57%;top: 36.5%;}*//*****216*******/
+/*.head4{width:45px;height:45px;position: absolute;left:58%;top: 36.5%;}*//*****217*******/
+/*.head4{width:45px;height:45px;position: absolute;left:59%;top: 37%;}*//*****218*******/
+/*.head4{width:45px;height:45px;position: absolute;left:60%;top: 37%;}*//*****219*******/
+/*.head4{width:45px;height:45px;position: absolute;left:61%;top: 37.5%;}*//*****220*******/
+/*.head4{width:45px;height:45px;position: absolute;left:62%;top: 37.5%;}*//*****221*******/
+/*.head4{width:45px;height:45px;position: absolute;left:63%;top: 37.5%;}*//*****222*******/
+/*.head4{width:45px;height:45px;position: absolute;left:64%;top: 37.5%;}*//*****223*******/
+/*.head4{width:45px;height:45px;position: absolute;left:65%;top: 38%;}*//*****224*******/
+/*.head4{width:45px;height:45px;position: absolute;left:66%;top: 38%;}*//*****225*******/
+/*.head4{width:45px;height:45px;position: absolute;left:67%;top: 38%;}*//*****226*******/
+/*.head4{width:45px;height:45px;position: absolute;left:68%;top: 38%;}*//*****227*******/
+/*.head4{width:45px;height:45px;position: absolute;left:69%;top: 38%;}*//*****228*******/
+/*.head4{width:45px;height:45px;position: absolute;left:70%;top: 38%;}*//*****229*******/
+/*.head4{width:45px;height:45px;position: absolute;left:71%;top: 38%;}*//*****230*******/
+/*.head4{width:45px;height:45px;position: absolute;left:72%;top: 38%;}*//*****231*******/
+/*.head4{width:45px;height:45px;position: absolute;left:73%;top: 38%;}*//*****233*******/
+/*.head4{width:45px;height:45px;position: absolute;left:74%;top: 37%;}*//*****234*******/
+/*.head4{width:45px;height:45px;position: absolute;left:75%;top: 36%;}*//*****235*******/
+/*.head4{width:45px;height:45px;position: absolute;left:76%;top: 35%;}*//*****236*******/
+/*.head4{width:45px;height:45px;position: absolute;left:77%;top: 34%;}*//*****237*******/
+/*.head4{width:45px;height:45px;position: absolute;left:78%;top: 33%;}*//*****238*******/
+/*.head4{width:45px;height:45px;position: absolute;left:79%;top: 32%;}*//*****239*******/
+/*.head4{width:45px;height:45px;position: absolute;left:80%;top: 31%;}*//*****240*******/
+/*.head4{width:45px;height:45px;position: absolute;left:80%;top: 30%;}*//*****241*******/
+/*.head4{width:45px;height:45px;position: absolute;left:80%;top: 29%;}*//*****242*******/
+/*.head4{width:45px;height:45px;position: absolute;left:80%;top: 28%;}*//*****243*******/
+/*.head4{width:45px;height:45px;position: absolute;left:80%;top: 27%;}*//*****244*******/
+/*.head4{width:45px;height:45px;position: absolute;left:79%;top: 26%;}*//*****245*******/
+/*.head4{width:45px;height:45px;position: absolute;left:78%;top: 25%;}*//*****246*******/
+/*.head4{width:45px;height:45px;position: absolute;left:77%;top: 24%;}*//*****247*******/
+/*.head4{width:45px;height:45px;position: absolute;left:76%;top: 23%;}*//*****248*******/
+/*.head4{width:45px;height:45px;position: absolute;left:75%;top: 22%;}*//*****249*******/
+/*.head4{width:45px;height:45px;position: absolute;left:75%;top: 21%;}*//*****250*******/
+/*.head4{width:45px;height:45px;position: absolute;left:74%;top: 20%;}*//*****251*******/
+/*.head4{width:45px;height:45px;position: absolute;left:74%;top: 19%;}*//*****252*******/
+/*.head4{width:45px;height:45px;position: absolute;left:74%;top: 18%;}*//*****253*******/
+/*.head4{width:45px;height:45px;position: absolute;left:73%;top: 17%;}*//*****254*******/
+/*.head4{width:45px;height:45px;position: absolute;left:73%;top: 16%;}*//*****255*******/
+/*.head4{width:45px;height:45px;position: absolute;left:73%;top: 15%;}*//*****256*******/
+/*.head4{width:45px;height:45px;position: absolute;left:74%;top: 15%;}*//*****257*******/
+/*.head4{width:45px;height:45px;position: absolute;left:75%;top: 15%;}*//*****258*******/
+/*.head4{width:45px;height:45px;position: absolute;left:76%;top: 15%;}*//*****259*******/
+/*.head4{width:45px;height:45px;position: absolute;left:77%;top: 15%;}*//*****260*******/
+/*.head4{width:45px;height:45px;position: absolute;left:78%;top: 14%;}*//*****261*******/
+/*.head4{width:45px;height:45px;position: absolute;left:79%;top: 14%;}*//*****262*******/
+/*.head4{width:45px;height:45px;position: absolute;left:80%;top: 14%;}*//*****263*******/
+/*.head4{width:45px;height:45px;position: absolute;left:81%;top: 14%;}*//*****264*******/
+/*.head4{width:45px;height:45px;position: absolute;left:82%;top: 14%;}*//*****265*******/
+/*.head4{width:45px;height:45px;position: absolute;left:83%;top: 14%;}*//*****266*******/
+/*.head4{width:45px;height:45px;position: absolute;left:84%;top: 14%;}*//*****267*******/
+/*.head4{width:45px;height:45px;position: absolute;left:85%;top: 14%;}*//*****268*******/
+/*.head4{width:45px;height:45px;position: absolute;left:86%;top: 13%;}*//*****269*******/
+/*.head4{width:45px;height:45px;position: absolute;left:87%;top: 13%;}*//*****270*******/
+/*.head4{width:45px;height:45px;position: absolute;left:88%;top: 13%;}*//*****271*******/
+/*.head4{width:45px;height:45px;position: absolute;left:89%;top: 13%;}*//*****272*******/
+/*.head4{width:45px;height:45px;position: absolute;left:89%;top: 12%;}*//*****273*******/
+/*.head4{width:45px;height:45px;position: absolute;left:90%;top: 11%;}*//*****274*******/
+/*.head4{width:45px;height:45px;position: absolute;left:90%;top: 10%;}*//*****275*******/
+/*.head4{width:45px;height:45px;position: absolute;left:90%;top: 9%;}*//*****276*******/
+/*.head4{width:45px;height:45px;position: absolute;left:90%;top: 8%;}*//*****277*******/
+/*.head4{width:45px;height:45px;position: absolute;left:90%;top: 7%;}*//*****278*******/
+/*.head4{width:45px;height:45px;position: absolute;left:89%;top: 6%;}*//*****279*******/
+/*.head4{width:45px;height:45px;position: absolute;left:88%;top: 5%;}*//*****280*******/
+/*.head4{width:45px;height:45px;position: absolute;left:87%;top: 4%;}*//*****281*******/
+/*.head4{width:45px;height:45px;position: absolute;left:86%;top: 3%;}*//*****282*******/
+/*.head4{width:45px;height:45px;position: absolute;left:85%;top: 3%;}*//*****283*******/
+/*.head4{width:45px;height:45px;position: absolute;left:84%;top: 3%;}*//*****284*******/
+/*.head4{width:45px;height:45px;position: absolute;left:83%;top: 3%;}*//*****285*******/
+/*.head4{width:45px;height:45px;position: absolute;left:82%;top: 2%;}*//*****286*******/
+/*.head4{width:45px;height:45px;position: absolute;left:81%;top: 2%;}*//*****287*******/
+/*.head4{width:45px;height:45px;position: absolute;left:80%;top: 2%;}*//*****288*******/
+.num5{width:168px;height:168px;position: absolute;top:23%;right:4% ; }
+.num4{width:159px;height:152px;position: absolute;top:23%;left:28%; }
+.num3{width: 155px;height: 150px;position: absolute;top:45%;left:10%; }
+.num2{width: 145px; height:143px; position: absolute;top:52%;left: 50%;}
+.num1{width: 146px;height: 143px;position: absolute;top:68%;right: 9%;}
+.other{width: 720px;height:900px;background-color:#cbf5ff; position: relative; }
+.key{width: 650px;height: 99px;margin-left: 71px;position: absolute;top:3%}
+.coin{width:80px;height: 29px;position: absolute;top:12%;left:17%;display:none;}
+.price{width: 50px; height: 20px; position: absolute;top:26%;left: 10%;z-index: 100;color:white;font-size: 0.5em;}
+/*.key1{width:262px; height:99px;float:left;background-image:url('../img/游戏规则@2x.png');  }
+.key2{width:262px; height:99px;float:left;background-image:url('../img/粉丝排名@2x.png');margin-left: 58px; }
+.content{width: 578px;height: 592px;margin-left: 71px;background-image: url('../img/紫色背景-游戏说明@2x.png');position: absolute;top:10%; }
+.content-box{width: 578px;height: 592px;position: absolute;top:7%; }
+.content-box ul li{font-size: 30px;color: #fa77bb;}*/
+.game{font-size: 36px; position: absolute;top:5%;margin-left:60px; color: white;cursor: pointer}
+.rank{font-size: 36px;position: absolute;top:5%;margin-left:60px;color: #f477be;cursor: pointer}
+.container{width:578px;height:700px; margin-left: 71px;position: absolute;top: 3% }
+.container ul li{width:262px;height: 99px;}
+.a{width:262px; height:99px;background-image: url('../img/粉丝排名@2x.png');}
+.b{width:262px; height:99px;background-image:url('../img/粉丝排名@2x.png');margin-left: 50px;}
+.content1{width: 578px;height: 592px;font-size: 30px;color: #fa77bb;background-image: url('../img/紫色背景-游戏说明@2x.png');position: absolute;top:9%;display: block }
+.content ul li{list-style: none;}
+.content2{width: 578px;height: 592px;font-size: 30px;color: #fa77bb;background-image: url('../img/紫色背景-游戏说明@2x.png');position: absolute;top:9%; }
+/****************************蒙版样式******************************/
+.square{width: 613px;height:570px;background-image: url('../img/蒙版@2x.png');position: absolute;top:10%;left:5%;display:none }
+.more{width: 43px;height: 43px;position: absolute;top:5%;left:5%;cursor: pointer}
+.close{width: 43px;height: 43px;position: absolute;top:5%;right:5%;cursor: pointer}
+.circle{width: 120px;height: 120px;background-image:url('../img/头像@2x.png');position: absolute;top:10%;left:40%;cursor: pointer }
+.intro{width:150px;height: 27px; position: absolute;top:35%;left:38%; }
+.left{width: 70px;height: 27px;float: left;line-height:27px;text-align:center;}
+.right{width: 73px;height: 27px;line-height:27px;text-align:center;float: left;background-image:url('../img/圆角矩形-3@2x.png'); overflow: hidden}
+.bolumn{width:470px;height: 140px; position: absolute;top:50%;left:20%;}
+.b1{width:120px; height: 140px; border: 1px solid green;float: left;cursor: pointer;}
+.b2{width:120px; height: 140px; border: 1px solid green;float: left;margin-left: 20px;cursor: pointer;}
+.b3{width:120px; height: 140px; border: 1px solid green;float: left;margin-left: 20px;cursor: pointer;}
+.bu{width: 179px;height: 65px;position:absolute;top:80%; left:40%;cursor: pointer; }
+/* 平板之类的宽度 1024 以下设备 */
+@media only screen and (min-width: 321px) and (max-width: 1024px) {
+    .content1{font-size:1.5rem;}
+    .content2{font-size:1.6rem;}
+    .price{font-size:0.5em;}
+    .fans_num{width:120px;height:20px;line-height:20px;font-size:0.5em;left: 39%;}
+    .extra{width: 60px;height: 40px;font-size:0.01em;}
+    .body{width: 720px;height: 1700px;}
+    .box{width: 720px;height: 764px;background-image: url('../img/赛道@2x.png');position:relative; }
+}
+/*********************************************/
